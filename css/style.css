@@ -1,0 +1,482 @@
+/* Global Rules */
+:root {
+  --orange: #ff4d29;
+  --dark: #092032;
+  --light: #516171;
+  --shadow: 0px 6px 30px rgba(0, 0, 0, 0.08);
+  --line-height: 1.7;
+  --transition-duration: .4s;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Barlow', sans-serif;
+  /* overflow-x: hidden; */
+  /* height: 7000px; */
+}
+
+h2,
+h3,
+h5 {
+  color: var(--dark);
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+p {
+  color: var(--light);
+  line-height: 1.7;
+}
+
+img {
+  max-width: 100%;
+}
+
+section {
+  padding: 5rem 0;
+}
+
+.main-btn {
+  background-color: var(--orange);
+  padding: .5rem 1.6rem;
+  text-transform: capitalize;
+  color: #fff;
+  border-color: var(--orange);
+}
+
+.main-btn:hover {
+  background-color: #d64022;
+  border-color: #d64022;
+  color: #fff;
+}
+
+.main-head span {
+  display: inline-block;
+  color: var(--orange);
+}
+
+.main-head p {
+  width: 31.25rem;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Nav */
+.top-nav {
+  background-color: var(--orange);
+  padding: 5px 0;
+}
+
+.top-nav .social-links a {
+  font-size: 14px;
+  width: 28px;
+  height: 28px;
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  color: #fff;
+  transition: all var(--transition-duration);
+}
+
+.top-nav .social-links a:hover {
+  background-color: #fff;
+  color: var(--orange);
+}
+
+.navbar {
+  background-color: #fff;
+  box-shadow: var(--shadow);
+}
+
+.navbar .navbar-brand {
+  font-size: 1.75rem;
+}
+
+.navbar .navbar-brand .dot {
+  color: var(--orange);
+}
+
+.navbar .navbar-nav .nav-link {
+  color: var(--dark);
+  font-weight: 500;
+}
+
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:hover {
+  color: var(--orange);
+}
+
+/* Modal */
+.modal .modal-img {
+  background-image: url(../images/c2.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 18rem;
+}
+
+.modal form h3 {
+  font-size: 2.5rem;
+}
+
+.modal form input:focus,
+.modal form textarea:focus {
+  border-color: var(--orange);
+  background-color: #fff;
+}
+
+.modal form input,
+.modal form textarea {
+  background-color: #0000000A;
+  border: 1px solid #0000000A;
+  padding: .4rem .75rem;
+}
+
+.modal form textarea {
+  min-height: 12.5rem;
+}
+
+/* Home */
+
+.main-slider .item1,
+.main-slider .item2 {
+  min-height: calc(100vh - 6.625rem);
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.main-slider .item1::before,
+.main-slider .item2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+
+.main-slider .item1 {
+  background-image: url(../images/bg_banner1.jpg);
+}
+
+.main-slider .item2 {
+  background-image: url(../images/bg_banner2.jpg);
+}
+
+.main-slider h2 {
+  color: #fff;
+  font-size: 4rem;
+}
+
+/* ************************ */
+.main-slider .work-btn {
+  padding: .5rem 1.625rem;
+}
+
+.main-slider .owl-prev,
+.main-slider .owl-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff !important;
+  background-color: rgba(255, 255, 255, 0.3) !important;
+  border-radius: .7rem !important;
+  padding: 1rem 1.5rem !important;
+  font-size: 1.2rem !important;
+  font-weight: bold;
+  transition: all var(--transition-duration);
+}
+
+.main-slider .owl-prev:hover,
+.main-slider .owl-next:hover {
+  background-color: var(--orange) !important;
+}
+
+.main-slider .owl-prev {
+  left: .4rem;
+}
+
+.main-slider .owl-next {
+  right: .4rem;
+}
+
+/* About */
+.about .box img {
+  max-width: 100%;
+  width: 90px;
+}
+
+/* Milestone */
+.milestone {
+  /* background-image: url(../images/bg_banner1.jpg);
+  background-position: center; */
+  background: linear-gradient(rgba(255, 77, 41, 0.85), rgba(255, 77, 41, 0.85)), url(../images/bg_banner1.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.milestone .box h2 {
+  font-size: 3.5rem;
+}
+
+@media (max-width: 767px) {
+
+  .main-slider h2,
+  .modal form h3 {
+    font-size: 2rem;
+  }
+
+  .milestone .box h2 {
+    font-size: 2.25rem;
+  }
+}
+
+/* services */
+.services .box {
+  background-color: #fff;
+  box-shadow: var(--shadow);
+  padding: 2rem;
+}
+
+.services .box h5 {
+  margin: 1.5rem .875rem;
+}
+
+.services .box img {
+  width: 5.6rem;
+}
+
+/* Portfolio */
+.portfolio {
+  background-color: #f8f9fa;
+}
+
+.portfolio .owl-item {
+  max-height: 40rem;
+  position: relative;
+}
+
+.portfolio .owl-item::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 13.75rem;
+  bottom: 0;
+  left: 0;
+  /* background-color: red; */
+  background: linear-gradient(180deg, rgba(255, 76, 41, 0) 0%, var(--dark) 100%);
+}
+
+.portfolio .owl-item img {
+  object-fit: fill;
+}
+
+.portfolio .owl-item .info {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+
+}
+
+.portfolio .info h3,
+.portfolio .info span {
+  color: #fff;
+}
+
+.portfolio .info span {
+  position: relative;
+  display: inline-block;
+  text-transform: capitalize;
+  padding-left: 2.5rem;
+}
+
+.portfolio .info span::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.9rem;
+  height: 1px;
+  background-color: var(--orange);
+}
+
+.portfolio .owl-dots .owl-dot.active span {
+  background-color: var(--orange);
+  transition: all var(--transition-duration);
+}
+
+/* Team */
+.team .box {
+  flex: 1 1 300px;
+  width: fit-content;
+  margin: auto;
+}
+
+.team .box .image {
+  position: relative;
+  overflow: hidden;
+}
+
+.team .box .image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  background-color: rgba(255, 77, 41, 0.7);
+  transition: all .4s;
+  opacity: 0;
+}
+
+.team .box:hover .image::before {
+  opacity: 1;
+  height: 100%;
+}
+
+.team .box .social {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: .2rem;
+  transition: all var(--transition-duration);
+  opacity: 0;
+}
+
+.team .box .social a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #fff;
+  transition: all .4s;
+}
+
+.team .box .social a:hover {
+  background-color: #fff;
+  color: var(--orange);
+}
+
+.team .box:hover .social {
+  top: 50%;
+  opacity: 1;
+}
+
+/* Reviews */
+.reviews {
+  background: linear-gradient(rgba(8, 32, 50, 0.8), rgba(8, 32, 50, 0.8)), url(../images/bg_banner1.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+
+.reviews .owl-item span {
+  color: var(--orange);
+}
+
+.reviews .owl-item p {
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.reviews .owl-item .rating {
+  color: var(--orange);
+  font-size: .8rem;
+}
+
+.reviews .owl-item img {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+
+.reviews .owl-dots .owl-dot.active span {
+  background-color: var(--orange);
+  transition: all var(--transition-duration);
+}
+
+/* Blog */
+.blog .box {
+  box-shadow: var(--shadow);
+}
+
+.blog .box a {
+  background-color: var(--orange);
+  top: 1.25rem;
+  left: 1.25rem;
+  padding: .125rem .75rem;
+  font-weight: 500;
+}
+
+.blog .box .content {
+  padding: 2rem;
+}
+
+.blog .box .content h5 {
+  margin: .75rem 0;
+}
+
+.blog .box .content span {
+  color: var(--orange);
+}
+
+/* Footer */
+.footer {
+  background: linear-gradient(rgba(8, 32, 50, 0.9), rgba(8, 32, 50, 0.9)), url(../images/bg_banner1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.footer .container {
+  padding: 5rem 2.5rem;
+}
+
+.footer p {
+  color: #ADB3B9;
+}
+
+.footer .container p {
+  width: 31.25rem;
+  margin: 0 auto;
+}
+
+.footer h3 span {
+  color: var(--orange);
+}
+
+.footer .copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.25rem;
+  margin: 0;
+}
+
+.footer .social-icons a {
+  width: 3rem;
+  height: 3rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: all var(--transition-duration);
+}
+
+.footer .social-icons a:hover {
+  background-color: var(--orange);
+  color: #fff;
+}
